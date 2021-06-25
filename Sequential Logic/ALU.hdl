@@ -59,6 +59,41 @@ CHIP ALU {
 
     // apply no
     Not16(in=fout, out=notfout);
-    Mux16(a=fout, b=notfout, sel=no, out=out);
+    Mux16(a=fout, b=notfout, sel=no, out=out, out[15]=ng, 
+    out[0]=p0,
+    out[1]=p1,
+    out[2]=p2,
+    out[3]=p3,
+    out[4]=p4,
+    out[5]=p5,
+    out[6]=p6,
+    out[7]=p7,
+    out[8]=p8,
+    out[9]=p9,
+    out[10]=p10,
+    out[11]=p11,
+    out[12]=p12,
+    out[13]=p13,
+    out[14]=p14,
+    out[15]=p15	
+    );
 
+    // calc zr
+    Mux(a=true, b=false, sel=p0, out=t0);
+
+    Mux(a=t0, b=false, sel=p1, out=t1);
+    Mux(a=t1, b=false, sel=p2, out=t2);
+    Mux(a=t2, b=false, sel=p3, out=t3);
+    Mux(a=t3, b=false, sel=p4, out=t4);
+    Mux(a=t4, b=false, sel=p5, out=t5);
+    Mux(a=t5, b=false, sel=p6, out=t6);
+    Mux(a=t6, b=false, sel=p7, out=t7);
+    Mux(a=t7, b=false, sel=p8, out=t8);
+    Mux(a=t8, b=false, sel=p9, out=t9);
+    Mux(a=t9, b=false, sel=p10, out=t10);
+    Mux(a=t10, b=false, sel=p11, out=t11);
+    Mux(a=t11, b=false, sel=p12, out=t12);
+    Mux(a=t12, b=false, sel=p13, out=t13);
+    Mux(a=t13, b=false, sel=p14, out=t14);
+    Mux(a=t14, b=false, sel=p15, out=zr);
 }
