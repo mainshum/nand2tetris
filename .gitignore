@@ -1,4 +1,10 @@
 projects
 tools
-Sequential Logic/*
-!Sequential Logic/*.hdl
+
+Basic Gates/*
+!Basic Gates/*.hdl
+Sequential Chips/*
+!Sequential Chips/*.hdl
+Combinatorial Chips/*
+!Combinatorial Chips/*.hdl
+
