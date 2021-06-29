@@ -7,4 +7,5 @@ Sequential Chips/*
 !Sequential Chips/*.hdl
 Combinatorial Chips/*
 !Combinatorial Chips/*.hdl
-
+Assembler/*
+!Assember/*.asm
